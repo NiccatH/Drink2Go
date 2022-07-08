@@ -1,0 +1,29 @@
+.control {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+}
+
+.control__input {
+  pointer-events: none;
+}
+
+.control__mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.control__input:disabled {
+  & + .control__mark {
+    cursor: default;
+  }
+
+  & + .control__mark + .control__label {
+    color: @base-grey;
+  }
+}

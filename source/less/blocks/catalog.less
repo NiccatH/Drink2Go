@@ -1,0 +1,128 @@
+.catalog {
+  background-color: @background-lightest-grey;
+}
+
+.catalog__title {
+  margin-top: 0;
+  margin-bottom: 21px;
+  font-size: 24px;
+  line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 42px;
+    line-height: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.catalog__wrapper {
+  background-color: @background-lightest-grey;
+  padding: 47px 20px 20px 20px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 78px 2.4% 60px 2.4%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 97px 39px 80px 39px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.catalog__main-wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 30px;
+    row-gap: 21px;
+  }
+}
+
+.catalog__filters {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 26px;
+    row-gap: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
+}
+
+
+.catalog__sorting {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+
+  &::after {
+    content: url("../../img/arrow-icon.svg");
+    position: absolute;
+    right: 13px;
+    top: 8px;
+    transform: rotate(-90deg);
+  }
+
+  @media (max-width: @mobile-only) {
+    width: 100%;
+    max-width: 280px;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-only) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.catalog__products {
+  margin: 0 auto 0 auto;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.catalog__pagination {
+  margin: 0;
+  padding: 40px 0 40px 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+    padding-top: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 42px;
+  }
+}

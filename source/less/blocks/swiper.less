@@ -1,0 +1,126 @@
+.swiper .swiper-button-prev {
+  top: 0;
+  width: 80px;
+  height: 105%;
+
+  &:hover {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  @media (max-width: @mobile-only) {
+    left: -20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+    height: 661.5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 105%;
+  }
+}
+
+.swiper .swiper-button-next {
+  top: 0;
+  width: 80px;
+  height: 105%;
+
+  &:hover {
+    background: linear-gradient(-90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(-90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  @media (max-width: @mobile-only) {
+    right: -20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    right: 0;
+    height: 661.5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 105%;
+  }
+}
+
+.swiper .swiper-button-prev::after {
+  color: @base-primary;
+  font-size: 20px;
+
+  @media (max-width: @mobile-only) {
+    transform: translate(-10px, 6px);
+  }
+
+  @media (min-width: @tablet-width) {
+    transform: translateY(10px);
+  }
+
+  @media (min-width: @desktop-width) {
+    transform: translateY(5px);
+  }
+}
+
+.swiper .swiper-button-next::after {
+  color: @base-primary;
+  font-size: 20px;
+
+  @media (max-width: @mobile-only) {
+    transform: translate(10px, 6px);
+  }
+
+  @media (min-width: @tablet-width) {
+    transform: translateY(10px);
+  }
+
+  @media (min-width: @desktop-width) {
+    transform: translateY(5px);
+  }
+}
+
+.swiper .swiper-button-disabled::after {
+  color: @base-grey;
+}
+
+.swiper > .swiper-pagination.swiper-pagination-bullets {
+  display: none;
+  bottom: 65px;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    bottom: 65px;
+  }
+}
+
+.swiper-pagination {
+  & .swiper-pagination-bullet {
+    width: 62px;
+    height: 4px;
+    margin-right: 8px;
+    margin-left: 8px;
+    border-radius: 0;
+    background-color: @base-white;
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      background-color: @primary-opacity;
+    }
+  }
+
+  & .swiper-pagination-bullet-active:focus {
+    background-color: @base-primary;
+  }
+
+  & .swiper-pagination-bullet-active {
+    background-color: @base-primary;
+  }
+}

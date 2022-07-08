@@ -1,0 +1,122 @@
+.advantages__wrapper {
+  padding: 47px 20px 28px 20px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 30px 100px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 95px 40px 120px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.advantages__title {
+  margin-top: 0;
+  margin-bottom: 36px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.advantages__list {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  padding-top: 66px;
+  box-sizing: border-box;
+
+  @media (max-width: @mobile-only) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-only) {
+    padding-top: 0;
+    padding-left: 71px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 76px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: @tablet-width) and (max-width: @tablet-only) {
+      left: 0;
+      transform: none;
+    }
+  }
+}
+
+.advantages__item--speed::before {
+  content: url("../../img/feature-speed.svg");
+}
+
+.advantages__item--convinience::before {
+  content: url("../../img/feature-fit.svg");
+}
+
+.advantages__item--energy::before {
+  content: url("../../img/feature-energy.svg");
+}
+
+.advantages__item--eco::before {
+  content: url("../../img/feature-ecology.svg");
+}
+
+.advantages__name {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.advantages__text {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

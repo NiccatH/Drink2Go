@@ -1,0 +1,150 @@
+.price-range__wrapper {
+  margin-top: 10px;
+
+  @media (max-width: @mobile-only) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+    margin-top: 15px;
+  }
+}
+
+.price-range__scale {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 33px;
+  background-color: @light-grey;
+}
+
+.price-range__bar {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 92.8%;
+  height: 4px;
+  background-color: @primary-lighter;
+
+  &--disabled {
+    background-color: @base-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 202px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 296px;
+  }
+}
+
+.price-range__toggle {
+  position: absolute;
+  top: -10px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid @primary-lighter;
+  border-radius: 50%;
+  background-color: @base-white;
+  cursor: pointer;
+  z-index: 1;
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    right: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+  }
+
+  &:disabled {
+    border: 2px solid @base-grey;
+    cursor: default;
+  }
+
+  &:hover:not(:disabled)::after,
+  &:focus::after {
+    background-color: @primary-opacity;
+  }
+
+  &:active:not(:disabled)::after {
+    background-color: @base-primary;
+  }
+}
+
+.price-range__inputs {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 2px;
+    background-color: @base-grey;
+  }
+}
+
+.price-range__input {
+  width: 125px;
+  font-family: "Montserrat", "Verdana", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  margin: 0;
+  border: none;
+  box-shadow: 0 0 0 2px inset @primary-lighter;
+  border-radius: 4px;
+  appearance: textfield;
+
+  &:focus {
+    box-shadow: 0 0 0 2px inset @primary-darker;
+  }
+
+  &:disabled {
+    box-shadow: 0 0 0 2px inset @light-grey;
+  }
+
+  &::placeholder {
+    color: @base-grey;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 96px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+  }
+}

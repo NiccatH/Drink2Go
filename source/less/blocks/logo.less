@@ -1,0 +1,41 @@
+.logo__icon {
+  height: 36px;
+
+  &--icon {
+    width: 32px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--medium {
+    display: none;
+    width: 82px;
+
+    @media (min-width: @tablet-width) and (max-width: @tablet-only) {
+      display: block;
+    }
+  }
+
+  &--full {
+    display: none;
+    width: 170px;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+}
+
+.logo__sub-info {
+  display: none;
+  width: 126px;
+  margin-left: 20px;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
+}

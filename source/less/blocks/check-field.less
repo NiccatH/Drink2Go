@@ -1,0 +1,64 @@
+.check-field__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.check-field__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.check-field__control {
+  padding-left: 52px;
+}
+
+.check-field__mark {
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: @base-grey;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: @base-white;
+    border-radius: 50%;
+    transition: all 0.2s ease-out;
+  }
+}
+
+.check-field__input {
+  &:focus + .check-field__mark,
+  &:hover:not(:disabled) + .check-field__mark {
+    background-color: @primary-opacity;
+    box-shadow: 0 0 0 2px inset @primary-lighter;
+  }
+
+  &:checked + .check-field__mark {
+    background-color: @base-primary;
+  }
+
+  &:checked + .check-field__mark::after {
+    left: 20px;
+  }
+
+  &:checked:not(:enabled) + .check-field__mark {
+    background-color: @light-grey;
+  }
+
+  &:checked:not(:enabled) + .check-field__mark::after {
+    background-color: @base-grey;
+  }
+
+  &:disabled + .check-field__mark {
+    background-color: @light-grey;
+  }
+
+  &:disabled + .check-field__mark::after {
+    background-color: @background-lightest-grey;
+  }
+}

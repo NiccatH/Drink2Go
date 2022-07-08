@@ -1,0 +1,95 @@
+.products__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px 21px 20px 21px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: @base-white;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding: 50px 30px 29px 30px;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    @media (min-width: @desktop-width) {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.products__link {
+  text-decoration: none;
+  color: @base-black;
+
+  &:hover,
+  &:focus {
+    color: @base-primary;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}
+
+.products__image {
+  display: block;
+  margin: 0 auto 24px auto;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.products__name {
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0 0 4px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.products__description {
+  margin: 0 0 16px 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.products__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.products__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products__button {
+  padding: 8px 20px 8px 46px;
+  color: @base-white;
+  background-color: @base-primary;
+  background-image: url("../../img/basket-plus.svg");
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}

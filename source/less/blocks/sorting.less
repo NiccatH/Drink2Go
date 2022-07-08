@@ -1,0 +1,28 @@
+.sorting__select {
+  width: 155px;
+  height: 34px;
+  padding: 0 25px 0 0;
+  font-family: "Montserrat", "Verdana", sans-serif;
+  color: @base-primary;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  background-color: @background-lightest-grey;
+  appearance: none;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: @base-secondary;
+  }
+}
+
+.sorting__label {
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 23px;
+  }
+}

@@ -1,0 +1,56 @@
+.user-list__item {
+  &:not(:last-child) {
+    @media (min-width: @desktop-width) {
+      margin-right: 27px;
+    }
+  }
+}
+
+.user-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  color: @base-black;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    height: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 112px;
+  }
+
+  &:focus,
+  &:hover {
+    color: @base-primary;
+  }
+
+  &:focus .user-list__icon,
+  &:hover .user-list__icon {
+    fill: @base-primary;
+  }
+
+  &:active {
+    background-color: @base-secondary;
+  }
+}
+
+.user-list__icon {
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 8px;
+  }
+}
+
+.user-list__text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}

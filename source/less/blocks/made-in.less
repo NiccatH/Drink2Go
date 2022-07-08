@@ -1,0 +1,43 @@
+.made-in__link {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  color: @base-grey;
+  text-decoration: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 56px;
+  }
+
+  &:hover .made-in__icon,
+  &:focus .made-in__icon {
+    fill: @base-primary;
+  }
+
+  &:active .made-in__icon {
+    fill: @primary-darker;
+  }
+}
+
+.made-in__text {
+  margin-right: 3px;
+}
+
+.made-in__icon {
+  width: 112px;
+  height: 16px;
+  fill: @base-grey;
+}

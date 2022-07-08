@@ -1,0 +1,32 @@
+.map__wrapper {
+  width: 100%;
+  height: 420px;
+
+  @media (min-width: @tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 540px;
+  }
+}
+
+.map__map {
+  width: 100%;
+  height: 100%;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.map__image {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &--nojs {
+    display: block;
+  }
+}
