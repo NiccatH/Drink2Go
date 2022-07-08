@@ -10,11 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check Out
-        uses: actions/checkout@v2.4.0
-        with:
-          persist-credentials: false
-
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
